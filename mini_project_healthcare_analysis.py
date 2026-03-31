@@ -59,24 +59,12 @@ hospital_df = (
     .drop_duplicates(subset=["Provider ID"])
 )
 
-print("\nHospital Summary Table:")
-print(hospital_df)
+
 
 
 
 # To confirm i have the right grain row(i wanted to see it) _ Method to get to the grain data.
 """
-#Another survey check 
-
-survey_check = (
-    df.groupby(["Provider ID", "Hospital Name"])["Number of Completed Surveys"]
-    .nunique()
-    .reset_index(name="solo_counts")
-)
-print("HEY!!!!!")
-print(survey_check["solo_counts"].value_counts())
-
-
 Suggestion for any dataset: 
 df.columns 
 df.head(10)
